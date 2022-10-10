@@ -10,3 +10,11 @@
 
 # Virions cần thiết
 >- InvMenu (muqsit)
+
+
+# HÌNH ẢNH HƯỚNG DẪN
+<img src="https://github.com/NoobMCBG/MosaicGems/blob/main/images/huongdan1.png"/>
+
+<br>
+
+<img src="https://github.com/NoobMCBG/MosaicGems/blob/main/images/huongdan2.png"/>
