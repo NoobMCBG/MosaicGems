@@ -13,7 +13,7 @@
 
 
 # HÌNH ẢNH HƯỚNG DẪN
-<img src="https://github.com/NoobMCBG/MosaicGems/blob/main/images/huongdan1.png"/>
+<img src="https://github.com/NoobMCBG/MosaicGems/blob/main/images/huongdan.png"/>
 
 <br>
 
