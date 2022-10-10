@@ -12,9 +12,11 @@
 >- InvMenu (muqsit)
 
 
-# HÌNH ẢNH HƯỚNG DẪN
+# HÌNH ẢNH TỪ PLUGIN
+>- Sau khi bấm nút xem vật phẩm nhận được:
 <img src="https://github.com/NoobMCBG/MosaicGems/blob/main/images/huongdan.png"/>
 
 <br>
 
+>- Sau khi bấm nút khảm ngọc:
 <img src="https://github.com/NoobMCBG/MosaicGems/blob/main/images/huongdan2.png"/>
