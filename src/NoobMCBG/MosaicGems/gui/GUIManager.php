@@ -85,8 +85,8 @@ class GUIManager {
                                 $player->removeCurrentWindow();
                                 $player->sendTitle("§l§c•§a KHẢM NGỌC THÀNH CÔNG §c•");
                                 $player->sendMessage("§l§c•§e Bạn Đã Khảm Ngọc Thành Công !");
-                                MosaicGems::getInstance()->sendSound($player, "random.totem");
-                                MosaicGems::getInstance()->sendSound($player, "random.levelup");
+                                MosaicGems::sendSound($player, "random.totem");
+                                MosaicGems::sendSound($player, "random.levelup");
                             }else{
                                 $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
                                 $action->getInventory()->setItem(24, ItemFactory::getInstance()->get(0));
@@ -94,7 +94,7 @@ class GUIManager {
                                 $player->getInventory()->addItem($ngoc);
                                 $player->getInventory()->addItem($doghep);
                                 $player->removeCurrentWindow();
-                                MosaicGems::getInstance()->sendSound($player, "random.explode");
+                                MosaicGems::sendSound($player, "random.explode");
                             }
                         }else{
                             $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -103,7 +103,7 @@ class GUIManager {
                             $player->getInventory()->addItem($ngoc);
                             $player->getInventory()->addItem($doghep);
                             $player->removeCurrentWindow();
-                            MosaicGems::getInstance()->sendSound($player, "random.explode");
+                            MosaicGems::sendSound($player, "random.explode");
                         }
                     }else{
                         $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -112,7 +112,7 @@ class GUIManager {
                         $player->getInventory()->addItem($ngoc);
                         $player->getInventory()->addItem($doghep);
                         $player->removeCurrentWindow();
-                        MosaicGems::getInstance()->sendSound($player, "random.explode");
+                        MosaicGems::sendSound($player, "random.explode");
                     }
                 }else{
                     $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -121,7 +121,7 @@ class GUIManager {
                     $player->getInventory()->addItem($ngoc);
                     $player->getInventory()->addItem($doghep);
                     $player->removeCurrentWindow();
-                    MosaicGems::getInstance()->sendSound($player, "random.explode");
+                    MosaicGems::sendSound($player, "random.explode");
                 }
             }else{
                 $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -130,7 +130,7 @@ class GUIManager {
                 $player->getInventory()->addItem($ngoc);
                 $player->getInventory()->addItem($doghep);
                 $player->removeCurrentWindow();
-                MosaicGems::getInstance()->sendSound($player, "random.explode");
+                MosaicGems::sendSound($player, "random.explode");
             }
             return $transaction->discard();
         }

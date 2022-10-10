@@ -30,7 +30,7 @@ class MosaicGems extends PluginBase implements Listener {
 		self::$instance = $this;
     }
 
-    public function sendSound(Player $player, string $soundName, float $volume = 0, float $pitch = 0) : void {
+    public static function sendSound(Player $player, string $soundName, float $volume = 1000, float $pitch = 1000) : void {
         $packet = new PlaySoundPacket();
         $packet->soundName = $soundName;
         $packet->x = $player->getPosition()->getX();

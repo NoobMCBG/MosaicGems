@@ -26,7 +26,7 @@ class MosaicGemsCommands extends Command implements PluginOwned {
 		}
 		$gui = new GUIManager();
 		$gui->menuKhamNgoc($sender);
-		MosaicGems::getInstance()->sendSound($sender, "random.click");
+		MosaicGems::sendSound($sender, "random.click");
 	}
 
 	public function getOwningPlugin() : MosaicGems {
