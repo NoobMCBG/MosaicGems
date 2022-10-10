@@ -7,6 +7,7 @@ namespace NoobMCBG\MosaicGems;
 use pocketmine\player\Player;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
+use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use muqsit\invmenu\InvMenuHandler;
 use NoobMCBG\MosaicGems\commands\MosaicGemsCommands;
 
