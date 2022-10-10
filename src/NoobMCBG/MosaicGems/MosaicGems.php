@@ -28,4 +28,15 @@ class MosaicGems extends PluginBase implements Listener {
 		//var_dump(\pocketmine\item\ItemIds::HEART_OF_THE_SEA);
 		self::$instance = $this;
     }
+
+    public function sendSound(Player $player, string $soundName, float $volume = 0, float $pitch = 0) : void {
+        $packet = new PlaySoundPacket();
+        $packet->soundName = $soundName;
+        $packet->x = $player->getPosition()->getX();
+        $packet->y = $player->getPosition()->getY();
+        $packet->z = $player->getPosition()->getZ();
+        $packet->volume = $volume;
+        $packet->pitch = $pitch;
+        $player->getNetworkSession()->sendDataPacket($packet);
+    }
 }

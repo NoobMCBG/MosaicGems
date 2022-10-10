@@ -85,8 +85,8 @@ class GUIManager {
                                 $player->removeCurrentWindow();
                                 $player->sendTitle("§l§c•§a KHẢM NGỌC THÀNH CÔNG §c•");
                                 $player->sendMessage("§l§c•§e Bạn Đã Khảm Ngọc Thành Công !");
-                                $this->sendSound($player, "random.totem");
-                                $this->sendSound($player, "random.levelup");
+                                MosaicGems::getInstance()->sendSound($player, "random.totem");
+                                MosaicGems::getInstance()->sendSound($player, "random.levelup");
                             }else{
                                 $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
                                 $action->getInventory()->setItem(24, ItemFactory::getInstance()->get(0));
@@ -94,7 +94,7 @@ class GUIManager {
                                 $player->getInventory()->addItem($ngoc);
                                 $player->getInventory()->addItem($doghep);
                                 $player->removeCurrentWindow();
-                                $this->sendSound($player, "random.explode");
+                                MosaicGems::getInstance()->sendSound($player, "random.explode");
                             }
                         }else{
                             $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -103,7 +103,7 @@ class GUIManager {
                             $player->getInventory()->addItem($ngoc);
                             $player->getInventory()->addItem($doghep);
                             $player->removeCurrentWindow();
-                            $this->sendSound($player, "random.explode");
+                            MosaicGems::getInstance()->sendSound($player, "random.explode");
                         }
                     }else{
                         $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -112,7 +112,7 @@ class GUIManager {
                         $player->getInventory()->addItem($ngoc);
                         $player->getInventory()->addItem($doghep);
                         $player->removeCurrentWindow();
-                        $this->sendSound($player, "random.explode");
+                        MosaicGems::getInstance()->sendSound($player, "random.explode");
                     }
                 }else{
                     $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -121,7 +121,7 @@ class GUIManager {
                     $player->getInventory()->addItem($ngoc);
                     $player->getInventory()->addItem($doghep);
                     $player->removeCurrentWindow();
-                    $this->sendSound($player, "random.explode");
+                    MosaicGems::getInstance()->sendSound($player, "random.explode");
                 }
             }else{
                 $action->getInventory()->setItem(20, ItemFactory::getInstance()->get(0));
@@ -130,7 +130,7 @@ class GUIManager {
                 $player->getInventory()->addItem($ngoc);
                 $player->getInventory()->addItem($doghep);
                 $player->removeCurrentWindow();
-                $this->sendSound($player, "random.explode");
+                MosaicGems::getInstance()->sendSound($player, "random.explode");
             }
             return $transaction->discard();
         }
@@ -187,15 +187,4 @@ class GUIManager {
 		$item = ItemFactory::getInstance()->get((int)$id, (int)$meta, (int)$count);
         return $item;
 	}
-
-    public function sendSound(Player $player, string $soundName, float $volume = 0, float $pitch = 0) : void {
-        $packet = new PlaySoundPacket();
-        $packet->soundName = $soundName;
-        $packet->x = $player->getPosition()->getX();
-        $packet->y = $player->getPosition()->getY();
-        $packet->z = $player->getPosition()->getZ();
-        $packet->volume = $volume;
-        $packet->pitch = $pitch;
-        $player->getNetworkSession()->sendDataPacket($packet);
-    }
 }
